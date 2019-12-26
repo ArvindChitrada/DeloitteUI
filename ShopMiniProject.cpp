@@ -46,7 +46,7 @@ class Items{
 			}if(id==104){
 				cout<<"Enter the quantity ";
 				cin>>quantity;
-				sum=sum+20.00*quantity;
+				sum=sum+40.00*quantity;
 			}if(id==105){
 				cout<<"Enter the quantity ";
 				cin>>quantity;
@@ -87,6 +87,7 @@ class Items{
 };
 main(){
 	int itemid,qty;
+	char option;
 	cout<<"Welcome to NexWave Store"<<endl;
 	cout<<"These are the items available"<<endl;
 	Items items;
@@ -103,6 +104,31 @@ main(){
 		items.getItems(itemid);
 		
 	}
-	items.printBill();
+	cout<<"\nDo you wish to continue... Please press Y or N"<<endl;
+	extra:cin>>option;
+	
+	switch(option){
+		case 'Y' :{
+			cout<<"Enter the no.of products you want to buy"<<endl;
+			cin>>qty;
+			for(int i=0;i<qty;i++){
+			cout<<"\nEnter id : ";
+			cin>>itemid;
+			items.getItems(itemid);
+		
+		}
+			items.printBill();
+			break;
+		}
+		case 'N' :{
+			items.printBill();
+			break;
+		}
+		default:{
+			cout<<"Please select Y or N only: ";
+			goto extra;
+		}
+	}
+	
 	
 }
