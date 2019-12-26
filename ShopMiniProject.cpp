@@ -80,7 +80,7 @@ class Items{
 	}
 	void printBill(){
 			cout<<"----------------------------------------------------------";
-			cout<<"\nTotal bill is : "<<sum<<endl;
+			cout<<"\nTotal bill is : "<<sum<<" Rs"<<endl;
 			cout<<"\nThank You Please Visit Again";
 			
 	}
