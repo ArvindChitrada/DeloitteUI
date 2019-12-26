@@ -1,15 +1,6 @@
 #include<iostream>
 using namespace std;
 
-//class Shop{
-//	
-//	void getBill(){
-//		
-//	}
-//	void printItem(){
-//		
-//	}
-//};
 class Items{
 	int quantity,sum;
 	public:
