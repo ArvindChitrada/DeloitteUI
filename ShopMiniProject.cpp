@@ -2,9 +2,13 @@
 using namespace std;
 
 class Items{
-	int quantity,sum;
+	int quantity;
+	float sum;
 	public:
 	void itemList(){
+		cout<<"\n------------------------------"<<endl;
+		cout<<" ID	 ITEM	   PRICE"<<endl;
+		cout<<"------------------------------"<<endl;
 		cout<<"101    Chocolate  Rs.50.00 \n";
 		cout<<"102    Biscuit 	  Rs.20.00 \n";
 		cout<<"103    Chips 	  Rs.30.00 \n";
@@ -69,7 +73,7 @@ class Items{
 			}
 		}
 		else{
-			cout<<"We don't have that item......Thank You Please Visit Again \n";
+			cout<<"We don't have that item...... \n";
 			return;
 		}
 	
@@ -77,12 +81,13 @@ class Items{
 	void printBill(){
 			cout<<"----------------------------------------------------------";
 			cout<<"\nTotal bill is : "<<sum<<endl;
+			cout<<"\nThank You Please Visit Again";
 			
 	}
 };
 main(){
 	int itemid,qty;
-	cout<<"Welcome to NexWave Bakery"<<endl;
+	cout<<"Welcome to NexWave Store"<<endl;
 	cout<<"These are the items available"<<endl;
 	Items items;
 	items.itemList();
